@@ -1,60 +1,69 @@
+/* Estilo básico para o corpo da página */
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #e3f2fd;
-  color: #fff;
+  background-color: #e3f2fd; /* Cor de fundo da página */
+  color: #fff; /* Cor do texto */
 }
 
+/* Estilo do contêiner principal */
 .container {
   width: 780px;
   border-radius: 20px;
   padding: 35px 40px;
-  background-color: black;
+  background-color: black; /* Cor de fundo do contêiner */
 }
 
+/* Estilo do cabeçalho dentro do contêiner */
 .container header {
-  color: #b2b2b2;
+  color: #b2b2b2; /* Cor do texto do cabeçalho */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Estilo do título no cabeçalho */
 header h2 {
   font-size: 1.6rem;
 }
 
+/* Estilo de coluna no cabeçalho */
 header .column {
   display: flex;
   align-items: center;
 }
 
+/* Estilo para o texto na coluna do cabeçalho */
 header .column span {
   font-weight: 500;
   margin-right: 15px;
   font-size: 1.19rem;
 }
 
+/* Estilo para o controle deslizante de volume */
 .volume-slider input {
-  accent-color: #fff;
+  accent-color: #fff; /* Cor do controle deslizante */
 }
 
+/* Estilo para a caixa de verificação de mostrar/ocultar teclas */
 .keys-check input {
   width: 60px;
   height: 30px;
   appearance: none;
   border-radius: 30px;
-  background-color: #4b4b4b;
+  background-color: #4b4b4b; /* Cor de fundo da caixa de verificação */
   cursor: pointer;
   position: relative;
 }
 
+/* Estilo para a aparência da caixa de verificação */
 .keys-check input::before {
   content: "";
   height: 20px;
   width: 20px;
-  background-color: #8c8c8c;
+  background-color: #8c8c8c; /* Cor de fundo da marcação */
   top: 50%;
   left: 0.3rem;
   border-radius: inherit;
@@ -63,32 +72,38 @@ header .column span {
   transition: all 0.3s ease;
 }
 
+/* Estilo quando a caixa de verificação está marcada */
 .keys-check input:checked::before {
   left: 2.1rem;
-  background-color: #fff;
+  background-color: #fff; /* Cor de fundo da marcação quando marcada */
 }
 
+/* Estilo para o contêiner das teclas do piano */
 .piano-keys {
   display: flex;
   margin-top: 40px;
 }
+
+/* Estilo para cada tecla do piano */
 .piano-keys .key {
   cursor: pointer;
   user-select: none;
   list-style: none;
-  color: #a2a2a2;
+  color: #a2a2a2; /* Cor do texto da tecla */
   position: relative;
   text-transform: uppercase;
 }
 
+/* Estilo para teclas brancas */
 .piano-keys .white {
   width: 70px;
   height: 230px;
   border: 1px solid black;
   border-radius: 8px;
-  background: linear-gradient(#fff 96%, #eee 4%);
+  background: linear-gradient(#fff 96%, #eee 4%); /* Gradiente de fundo */
 }
 
+/* Estilo para teclas pretas */
 .piano-keys .black {
   width: 44px;
   height: 140px;
@@ -96,9 +111,10 @@ header .column span {
   margin: 0 -22px 0 -22px;
   border: 1px solid black;
   border-radius: 0 0 5px 5px;
-  background: linear-gradient(#333, #000);
+  background: linear-gradient(#333, #000); /* Gradiente de fundo */
 }
 
+/* Estilo para o texto dentro das teclas do piano */
 .piano-keys span {
   position: absolute;
   bottom: 20px;
@@ -107,16 +123,19 @@ header .column span {
   font-size: 1.13rem;
 }
 
+/* Estilo quando uma tecla branca está ativa */
 .piano-keys .white.active {
   box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom #fff 0%, #eee 100%);
 }
 
+/* Estilo quando uma tecla preta está ativa */
 .piano-keys .black.active {
   box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.1);
   background: linear-gradient(to bottom #000, #434343);
 }
 
+/* Estilo para ocultar o texto nas teclas ocultas */
 .piano-keys .key.hide span {
   display: none;
 }
